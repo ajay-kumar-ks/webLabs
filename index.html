@@ -1,0 +1,268 @@
+<html>
+
+<head>
+    <title>Registration form</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;">
+
+    <div
+        style="height:750px;background:rgb(250, 249, 249);border-radius:4px;box-shadow:1px 1px 15px rgb(194, 192, 192);display:gird;padding:20px 80px;">
+        <div class="inputForm" style="display:flex;width:100%;justify-content:center;margin-top:10px;">
+            <h2>Registration Form</h2>
+        </div>
+        <div class="errorDiv" style="width:100%;border:1px solid black;border-color: red !important;padding:15px;color:rgb(254, 2, 2);font-size:1rem;border-radius:4px;display:none;justify-content:space-between;">
+                <div class="content"></div><div class="closeBtn" style="width:10px;height:10px;cursor:pointer;color:black;">X</div>
+        </div>
+        <div class="inputForm" style="display:flex;justify-content:space-between;">
+            
+            <div style="justify-content:center;align-items:center;margin-top:10px;">
+                <div>
+                    <h3 style="color:#31326F;">Personal Information</h3>
+                    <hr style="border: 0; height: 1px; background-color: rgb(107, 106, 106);width:100%;">
+                </div>
+                <table>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>First Name :</label>
+                        </td>
+                        <td>
+                            <input id="fname" type="text"
+                                style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Second Name :</label>
+                        </td>
+                        <td>
+                            <input id="lname" type="text" style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Gender :</label>
+                        </td>
+                        <td style="display:flex;">
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <label for="male">male</label>
+                                <input class="gender" type="radio" name="gender" value="male"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                            </div>
+                            &nbsp;&nbsp;
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <label for="female">female</label>
+                                <input class="gender" type="radio" name="gender" value="female"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                            </div>
+                            &nbsp;&nbsp;
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <label for="others">others</label>
+                                <input class="gender" type="radio" name="gender" value="others"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Dob :</label>
+                        </td>
+                        <td>
+                            <input id="dob" type="date"
+                                style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Address :</label>
+
+                        </td>
+                        <td>
+                            <textarea id="address" row="2"
+                                style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Phone :</label>
+
+                        </td>
+                        <td>
+                            <input id="phone" type="number"
+                                style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email :</label>
+
+                        </td>
+                        <td>
+                            <input id="email" type="text"
+                                style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Guardian :</label>
+                        </td>
+                        <td>
+                            <input id="guardian" type="text"
+                                style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                        </td>
+                    </tr>
+                    <tr style="height:20px;">
+
+                    </tr>
+
+
+                </table>
+            </div>
+
+
+            <div style="justify-content:center;margin-top:10px;margin-left:40px;">
+                <div>
+                    <div>
+                        <h3 style="color:#31326F;">Office use</h3>
+                        <hr style="border: 0; height: 1px; background-color: rgb(107, 106, 106);width:100%;">
+                    </div>
+                    <div>
+                        <table>
+                            <tr style="height:20px;">
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Course :</label>
+
+                                </td>
+                                <td>
+                                    <select name="course" id="course"
+                                        style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;background: white;">
+                                        <option value="1">MCA</option>
+                                        <option value="2">MSC</option>
+                                        <option value="3">MTECH</option>
+                                        <option value="4">MA</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr style="height:20px;">
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Admission number :</label>
+
+                                </td>
+                                <td>
+                                    <input id="phone" type="number"
+                                        style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                                </td>
+                            </tr>
+                            <tr style="height:20px;">
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Register number :</label>
+
+                                </td>
+                                <td>
+                                    <input id="phone" type="number"
+                                        style="width:250px;height:35px;border:1px solid #cac8c8;border-radius:5px;" />
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div>
+                        <div>
+                            <h3 style="color:#31326F;">Hobbies</h3>
+                            <hr style="border: 0; height: 1px; background-color: rgb(107, 106, 106);width:100%;">
+                        </div>
+                        <div style="display:flex;">
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <input class="gender" type="radio" name="gender" value="male"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                                <label for="male">Swimming</label>
+                            </div>
+                            &nbsp;&nbsp;
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <input class="gender" type="radio" name="gender" value="female"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                                <label for="female">Barking</label>
+                            </div>
+                            &nbsp;&nbsp;
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <input class="gender" type="radio" name="gender" value="others"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                                <label for="others">Slapping</label>
+                            </div>
+                            &nbsp;&nbsp;
+                            <div style="display:flex;justify-content:center;align-items:center;">
+                                <input class="gender" type="radio" name="gender" value="others"
+                                    style="width:20px;height:30px;border:1px solid #cac8c8;border-radius:5px;" />
+                                <label for="others">Running</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width:100%;display:flex;justify-content:end;margin-top:26%;">
+                        <button id="submit"
+                            style="width:70px;height:30px;font-size:1rem;background:rgb(36, 196, 36);border:none;box-shadow:1px 1px 10px rgb(183, 181, 181);cursor:pointer;border-radius:5px;">submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="formDetails" style="display:none">
+            <table>
+                <tr>
+                    <td>
+                        Name :
+                    </td>background
+                    <td>
+                        ajay
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
