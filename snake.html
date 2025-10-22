@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Number Timer</title>
+  <style>
+     body {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      height:60vh;
+    }
+    .container{
+      width : 260px;
+      height : 290px;
+      background-color: #000;
+      color: #00ff99;
+      font-family: monospace;
+      font-size: 16px;
+      white-space: pre;
+      line-height: 1.2;
+      letter-spacing: 7px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    pre {
+      font-weight: 900;
+    }
+    .contrl{
+      width:260px;
+      background-color: rgb(185, 187, 189);
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .btn{
+      width:40px;
+      height: 30px;
+      border-radius: 4px;
+      background-color: #00ff99;
+      color: #000;
+      font-weight: bold;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <pre id="ss"></pre>
+
+  </div>
+   <div class="contrl">
+      <div class="leftBtn btn">
+         <
+      </div>
+      <div class="rightBtn btn">
+         >
+      </div>
+   </div>
+  <script>
+    const ss = document.getElementById("ss");
+        
+
+    let current = 1;
+
+    function drawDigit(r,c) {
+      let output = "";
+          for (let row = 0; row < 15; row++) {
+            for (let col = 0; col < 15; col++) {
+              output += (row == r-1 && col == c-1) ? "*" : " ";
+            }
+            output += "\n";
+          }
+      return output;
+    }
+
+    function callEverySecond(callback) {
+      return setInterval(callback, 100);
+    }
+    let temp = 15;
+    let temp2 = 15;
+    const intervalId = callEverySecond(() => {
+      if (current > 60) {
+        clearInterval(intervalId);
+        ss.textContent = "Done!";
+        return;
+      }
+      let rr = 0;
+      let cc = 0;
+      
+        if(current < 15){
+            rr = 1;
+            cc = current;
+        }else if(current < 30){
+            cc = 15;
+            rr = current%15;
+        }else if(current < 45){
+            rr = 15;
+            cc = temp--;
+        }else if(current < 60){
+            cc = 1;
+            rr = temp2--;
+        }
+      ss.textContent = drawDigit(rr,cc);
+      current++;
+      if(current == 59)
+        current = 0;
+    });
+  </script>
+</body>
+</html>
